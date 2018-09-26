@@ -1,0 +1,13 @@
+CREATE TABLE "livros" (
+	"id" SERIAL NOT NULL,
+	"titulo" VARCHAR(255) NOT NULL,
+	"capa" VARCHAR(255),
+	"autor" VARCHAR(255) NOT NULL,
+	"lancamento" SMALLINT NOT NULL,
+	"nota" NUMERIC(4,2) NOT NULL DEFAULT 0,
+	"resenha" TEXT,
+	"cadastro" TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',
+	CONSTRAINT livros_pk PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
